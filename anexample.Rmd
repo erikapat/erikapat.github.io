@@ -16,9 +16,9 @@ output:
 
 ---
 
-This is just a compendium of the most interesting visualizations that I have done while I was working as a data scientist, most of them where modified to protect data privacy (Work in progress).
+<h2> This is just a compendium of the most interesting visualizations that I have done while I was working as a data scientist, most of them where modified to protect data privacy (Work in progress). </h2>
 
-The images here are not those that I am interested to show (<strong> Web Page under construction </strong>)
+<h2> The images here are not those that I am interested to show (<strong> Web Page under construction </strong>) </h2>
 
 &nbsp;
 &nbsp;
