@@ -1,0 +1,122 @@
+---
+title: ""
+output: 
+  html_document:
+    css: style.css
+    toc: false
+    includes:
+      #in_header: footer.html
+      #before_body: footer.html
+     # after_body: footer.html
+---
+
+&nbsp;
+&nbsp;
+<left> <h1> <strong> Interactive Visualizations </strong></h1> </left>
+
+---
+
+This is just a compendium of the most interesting visualizations that I have done while I was working as a data scientist, most of them where modified to protect data privacy (Work in progress).
+
+The images here are not those that I am interested to show (<strong> Web Page under construction </strong>)
+
+&nbsp;
+&nbsp;
+
+&nbsp;
+&nbsp;
+
+
+---
+
+<left> <h4> <strong> Houses for rent in the comunity of  Madrid </strong></h4> </left>
+
+```{r echo=FALSE, fig.height=4, fig.width=10, message=FALSE, warning=FALSE}
+
+
+#shiny::includeHTML("./animations/MAPA.html")
+
+
+
+# library("rgdal")
+# library("rgeos")
+# library("data.table")
+# suppressWarnings(library(leaflet))
+# 
+# 
+# #------------------------------------------------------------------------------------
+# # Load the output area shapefiles
+# data.shape <- readOGR('/home/erika/Dropbox/GIT/MARKDOWN/restore/data/map/sscc_2016.shp', verbose = F)
+# 
+# load("data/indicadores.SSCC.RData")
+# Census.Data <- as.data.table(indicadores.SSCC)
+# Census.Data <- Census.Data[substr(SSCC, 1,2) == 28, ]
+# 
+# Census.Data <- as.data.frame(Census.Data)
+# pal  <- colorNumeric(palette = 'Blues', domain = c(min(Census.Data[, 335]), max(Census.Data[, 335])))
+# mapa <- leaflet() %>%
+#   addPolygons(data = data.shape[data.shape$CUSEC %in% Census.Data[,1], ],
+#               weight = 1,
+#               color = '#000000',
+#               fillColor = pal(as.numeric(Census.Data[,335])),
+#               fillOpacity = 0.6,
+#               popup = ~paste0("<b> SSCC: </b>", CUSEC, "<br>",
+#                               "<b> Municipality: </b>", NMUN, "<br>",
+#                               "<b> Num. of houses for rent: </b>", Census.Data[, 335], "<br>")) %>%
+#   addProviderTiles('OpenStreetMap.Mapnik') %>%
+#   addLegend("bottomright", pal = pal, values = (as.numeric(Census.Data[,335])),
+#             title = "Houses for rent",
+#             opacity = 0.6 )
+# 
+# mapa
+
+``` 
+   
+  
+
+\
+\
+
+&nbsp;
+
+--- 
+
+&nbsp;
+
+<left> <h4> <strong> Number of devices connected to a Wi-Fi network by day and hour </strong></h4> </left>
+
+
+
+```{r echo=FALSE, message=FALSE}
+require(dplyr)
+require(highcharter)
+require(htmlwidgets)
+
+source('src/functions_highchart.R')
+load('data/dat.purple.dup.RData')
+
+
+dat.aux.dup.x     <- dat.purple.dup[order(SEEN), ][, MEAN_FREQ_HOUR := round(mean(FREQ_DAY_HOUR),2), by = HOUR][, .(DAY, HOUR, FREQ_DAY_HOUR, MEAN_FREQ_HOUR, MONTH, YEAR)][, KEY := paste0(DAY, '-', HOUR)]
+dat.aux.dup.x     <- dat.aux.dup.x[!duplicated(KEY)][order(HOUR, FREQ_DAY_HOUR), ]
+dat.aux.dup.x     <- dat.aux.dup.x[, TITLE := 'DAY'][, TITLE2 := 'DAILY MEAN'] 
+dat.aux.dup.x     <- dat.aux.dup.x[, .(DAY, HOUR, FREQ_DAY_HOUR,  MEAN_FREQ_HOUR, TITLE, TITLE2, MONTH, YEAR)] 
+dat.aux.dup.x.dup <- dat.aux.dup.x[!duplicated(HOUR),][order(HOUR), ]
+names(dat.aux.dup.x)     <- c('Z', 'X', 'Y', 'Y2', 'TITLE', 'TITLE2', 'W', 'H')
+dat.aux.dup.x.dup <- dat.aux.dup.x.dup[, DAY := NA]
+names(dat.aux.dup.x.dup) <-  c('Z', 'X', 'Y', 'Y2', 'TITLE', 'TITLE2', 'W', 'H')
+
+#plot the graphs
+graph_points_lines(dat.aux.dup.x, dat.aux.dup.x.dup, xlabel = "Hour", ylabel = "Number of dispositives connected", ylegend ='Frequency')
+
+dat.aux.dup.x <- dat.aux.dup.x[order(Z), ][!duplicated(Z), ][, X := Z][, Z := NULL]
+dt <- dat.aux.dup.x
+graph_lines(dt, xlabel = "Day", ylabel = "Number of dispositives connected", ylegend ='Frequency', zlegend ='Day')
+
+ ``` 
+
+
+---
+
+   
+   
+

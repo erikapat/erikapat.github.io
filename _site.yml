@@ -1,0 +1,64 @@
+name: "Erika Gomes"
+navbar:
+  title: ""
+  type: default #inverse
+  center:
+  - text: "Home"
+  right:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+   # - text: "About"
+  #    icon: fa-info
+  #    href: about.html
+    - text: "Publications"
+      icon: fa-tasks
+      href: publications.html
+    - text: "Blog"
+      icon: fa-coffee
+      href: blog.html
+    - text: "More"
+      icon: glyphicon glyphicon-sunglasses
+      menu:
+        - text: ""
+        - text: "Publications"
+          href: publications.html
+        - text: "CV"
+          href: cv.html
+        - text: "---------"
+        - text: "Miscellaneous"
+        - text: "Visualizations"
+          href: anexample.html
+        - text: "Resources"
+          href: presentations.html
+        - text: "---------"
+        - text: "Even More ..."
+        - text: "Google Scholar"
+          href: https://scholar.google.es/citations?user=OT0Ole4AAAAJ&hl=en
+        - text: "Research Gate"
+          href: https://www.researchgate.net/profile/Erika_Gomes-Goncalves
+  left:
+    - text: 
+    - icon: <i class="fa fa-github fa-2x"></i> fa-2x #fa-github-alt #
+      href: https://github.com/erikapat 
+    - icon: <i class="fa fa-twitter fa-2x"></i> fa-2x
+      href: https://twitter.com/erikapatg
+    - icon: <i class="fa fa-linkedin fa-2x"></i> fa-2x #fa-linkedin
+      href: https://es.linkedin.com/in/erikapgomes 
+    - icon: <i class="fa fa-google fa-2x "></i> fa-2x 
+      href: https://scholar.google.es/citations?user=OT0Ole4AAAAJ&hl=en 
+    #- icon: <i class="ai ai-google-scholar-square ai-2x"></i> ai-2x
+    #  href: https://scholar.google.es/citations?user=OT0Ole4AAAAJ&hl=en 
+#output:
+  html_document:
+    theme: lumen
+#    #"default", "cerulean", "journal", "flatly", "readable", "spacelab", "united", "cosmo", "lumen", "paper", "sandstone", "simplex", and "yeti"
+    highlight: tango
+    #"default", "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", "haddock", and "textmate"
+    include:
+      #in_header: footer.html
+      before_body: footer.html
+      after_body: footer.html
+    css: style.css
+      
+      

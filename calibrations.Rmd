@@ -1,0 +1,29 @@
+---
+title: ""
+output: 
+  html_document:
+    css: style.css
+    includes:
+      after_body: footer.html
+---
+  
+  &nbsp;
+
+ \
+  \
+
+<h2><strong> <i>[Calibration of Discrete Time Short Rate Term Structure Models from Coupon Bond Prices](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2976076)</i></strong></h2> 
+<h8><i> Working paper, 2017 </i></h8> 
+
+  \
+  
+In this work we use the method of maximum entropy to solve two problems in interest term structure determination. First we use the method of maximum entropy in the mean to solve an inverse problem consisting of determining the price of the zero coupon bonds when we only know the price of a few coupon bonds up to a bid-ask range, with or without pricing errors. This is a particular case of the general problem of determining discount factors from the knowledge of their present value up to a range, and with or without uncertainty.
+
+The other aim of this note is to use a maxentropic procedure to determine the term structure of the short rates in a binomial market model. This uses as input the prices of the zero coupon bonds obtained as output in the stage mentioned in the previous paragraph. Surprisingly enough, the determination of the short rates leads of a recursive set of linear problems with convex constraints, quite similar to the problem of determination of the zero coupon bond prices, which can also be solved by the method of maximum entropy in the mean.
+
+The nice aspect of the combined procedures is that we have a model free, non-parametric methodology that uses only market data to provide both the prices of the zero coupon bonds and a term structure of the short rates consistent with the bond prices.
+ 
+ <span><i class="fa fa-tasks"></i>[ Go back to Publications](publications.html)</span>
+
+  
+<h2> You can see more  in my [Google Scholar page](https://scholar.google.es/citations?user=OT0Ole4AAAAJ&hl=en).</h2>

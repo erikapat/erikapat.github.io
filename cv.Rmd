@@ -1,0 +1,30 @@
+---
+title: ""
+output: 
+  html_document:
+    css: style.css
+    toc: false
+    includes:
+      #in_header: header.html
+      #before_body: header.html
+      after_body: footer.html
+---
+
+&nbsp;
+&nbsp;
+
+<left> <h1> <strong> CV </strong></h1> </left>
+
+---
+
+&nbsp;
+&nbsp;
+<p> Under construction ... wait a little bit or check my [Linkedin Profile](https://es.linkedin.com/in/erikapgomes)</p>
+&nbsp;
+
+
+&nbsp;
+&nbsp;
+
+
+

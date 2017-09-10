@@ -1,0 +1,65 @@
+---
+title: ""
+output: 
+  html_document:
+    css: style.css
+    includes:
+      after_body: footer.html
+---
+
+<!---
+entries will follow this format:
+<article>
+<h3><a href=""> </a></h3>
+<div class="summary">
+<span><i class="fa fa-calendar"></i> _date_</span>
+<p> ...</p>
+<a class="btn btn-outline-primary btn-sm" href="">Full Post</a>
+</div>
+</article>
+--->
+
+&nbsp;
+&nbsp;
+
+<left> <h1> <strong> BLOG </strong></h1> </left>
+
+
+
+&nbsp;
+&nbsp;
+
+
+---
+<h4><strong> 2017 </strong></h4> 
+---
+
+<article>
+<h2><a href="Maxentropic_applications_Finance.html"> Maxentropic applications in Finance </a></h2>
+<div class="summary">
+<span><i class="fa fa-calendar"></i> _2017-06-29_</span>
+
+>  **Entropy**, in the framework of probability theory is defined as a measure of the degree of uncertainty or unpredictability of a system, where its magnitude certainly depends of the quantity of information available. **Anything that we cannot explain is assigned as much uncertainty or maximum entropy as possible**.  A good example comes from the field of finance where the hypothesis that markets respond ... 
+<a class="btn btn-outline-primary btn-sm" href="Maxentropic_applications_Finance.html"> 
+Full Post</a>
+</div>
+</article>
+
+<article>
+<h2><a href="Maxentropic_Methods_Operational_Risk.html"> Maxentropic Methods in Operational Risk: A Review </a></h2>
+<div class="summary">
+<span><i class="fa fa-calendar"></i> _2017-06-11_</span>
+
+>  The **Maxentropic methodologies** that we will mention in this article can handle with many of the problems found in **Operational Risk**,  and they can provide a good density reconstruction over the entire range of values. So far, banks use the **loss distributional approach** to determine capital charge through historical data using information about the frequency and severity (loss amount) of losses to estimate ...
+<a class="btn btn-outline-primary btn-sm" href="Maxentropic_Methods_Operational_Risk.html">Full Post</a>
+</div>
+</article>
+
+
+---
+
+
+
+
+
+

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a></a>
+</li>
+<li>
+  <a href="https://github.com/erikapat">
+    <span class="&lt;i class=&quot;fa fa &lt;i class=&quot;fa fa-github fa-2x&quot;&gt;&lt;/i&gt; fa-2x"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/erikapatg">
+    <span class="&lt;i class=&quot;fa fa &lt;i class=&quot;fa fa-twitter fa-2x&quot;&gt;&lt;/i&gt; fa-2x"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://es.linkedin.com/in/erikapgomes">
+    <span class="&lt;i class=&quot;fa fa &lt;i class=&quot;fa fa-linkedin fa-2x&quot;&gt;&lt;/i&gt; fa-2x"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://scholar.google.es/citations?user=OT0Ole4AAAAJ&amp;hl=en">
+    <span class="&lt;i class=&quot;fa fa &lt;i class=&quot;fa fa-google fa-2x &quot;&gt;&lt;/i&gt; fa-2x"></span>
+     
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="publications.html">
+    <span class="fa fa-tasks"></span>
+     
+    Publications
+  </a>
+</li>
+<li>
+  <a href="blog.html">
+    <span class="fa fa-coffee"></span>
+     
+    Blog
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="glyphicon glyphicon glyphicon glyphicon-sunglasses"></span>
+     
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header"></li>
+    <li>
+      <a href="publications.html">Publications</a>
+    </li>
+    <li>
+      <a href="cv.html">CV</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Miscellaneous</li>
+    <li>
+      <a href="anexample.html">Visualizations</a>
+    </li>
+    <li>
+      <a href="presentations.html">Resources</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Even More ...</li>
+    <li>
+      <a href="https://scholar.google.es/citations?user=OT0Ole4AAAAJ&amp;hl=en">Google Scholar</a>
+    </li>
+    <li>
+      <a href="https://www.researchgate.net/profile/Erika_Gomes-Goncalves">Research Gate</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p> </p>
+<br />
+<br />
+<br />
+
+<center>
+<img src="images/equations2.png" alt="Caption for the picture." />
+</center>
+<br />
+<br />
+
+<h4>
+Maxentropic* Methods in Operational Risk: A Review
+</h4>
+<h5>
+*entropy (noun), entropic (adjective), entropically (adverb)
+</h5>
+<p><br />
+<br />
+In banking and financial industries, during the last few decades, there has been a collective effort, to develop a conceptual framework to characterize and quantify risk, in particular in Operational Risk, in order to put money aside to cover large - scale losses and ensure in this way the solvency and economic stability of the financial system.</p>
+<p>In the field of insurance modeling a similar effort has been done to set premiums and optimal reinsurance levels, using historical data of claims or losses. The differences between banking and insurance companies lies in the availability of data. Usually, in insurance the data is sufficient for a statistical description of the process, while, in the area of Operational Risk, the sample sizes are always small. So, depending of the given sample size the results may vary widely.</p>
+<p>So far, banks use the <strong>loss distributional approach</strong> to determine capital charge through historical data using information about the frequency and severity (loss amount) of losses to estimate the annual aggregate loss for each line and event type. In this context, annual frequency of losses is usually modelled by Poisson or negative Binomial distributions. Generally, loss data can be fitted to a variety of severity distributions, lognormal, gamma, GDP, etc.</p>
+<br />
+<br />
+<br />
+
+<center>
+<img src="images/lda.png" alt="Caption for the picture." />
+</center>
+<p><br />
+<br />
+</p>
+<p>An important measure used in operational risk is Value-at-Risk, which estimates the worst possible loss event that can occur with a certain probability over a given time period. The regulations establish that the allocated capital should correspond to a 1-in-1000 (or the value that correspond to the quantile 0.999) years worst possible loss event, which is a much larger time period than the window over which banks have been collecting operational loss data (usually between five and fifteen years).</p>
+<p>To calculate regulatory capital, we have to calculate the distribution of the losses so a quantitative model is required to model the peculiarities of the loss distribution: high kurtosis, severe right skewness and excessive heavy - tailedness. Model this kind of distributions in banking distributions is quite complicated due to the impossibility of model ‘tail events’ because in many cases no data is available to characterize the distribution in the tail, so there is the possibility that the estimates understate the capital that from a regulatory perspective should be avoided.</p>
+<p>On the other hand overestimation is also an issue to take in account in banking due to the opportunity costs of not investing the available capital. The overestimation may occurs when we consider perfectly correlation across risks, this is the direct sum of losses. Most of the time it is difficult to model correlations between different risk types and/or business units, because banks are quite short of historical data, which implies that reliable estimations of correlation can hardly be extracted from historical data.</p>
+<p>So, for the correct estimation of quantiles, the problem to solve is model the distribution in the whole range of interest.</p>
+<p>Motivated by the aforementioned issues, we propose to model the total losses by maximizing an entropy measure. The Maxentropic methodologies that we will mention in this article can handle with the problems discussed above and they can provide a good density reconstruction over the entire range of values.</p>
+<p>To better understand the problem consider that a bank use the following methodology:</p>
+<br />
+<br />
+<br />
+
+<center>
+<img src="images/methodology.png" alt="Caption for the picture." />
+</center>
+<p><br />
+<br />
+</p>
+<p>Under this LDA approach there is some flexibility, thus the methodology may vary from bank to bank</p>
+<p>Here we apply the approach described before to different samples of size 10 with the same underlying loss process. Clearly ,the results depends of the quality of the data, but it is also influence for the uncertainty in the estimation of the parameters, clearly the principal problem is the bad fit of the tail where the black swans are.</p>
+<p>A potential solution is to model the body and the tail separately but other problems emerges, especially when the data is scarce, in this case fit the tail would be difficult, even impossible to do.</p>
+<p>As a consequence, we can see that we have and undestimation of the capital charge, because we have a fit that do not take in account large losses. Observe that even the average of the different estimate densities (resampling method*) give us a bad fit.</p>
+<p><h7> *The resampling methods consist in consider different scenarios each one with its own solution. The definitive solution is obtained by averaging the solutions for each of the considered scenarios. </h7></p>
+<br />
+<br />
+<br />
+
+<center>
+<img src="images/ilustrative_example_1.png" alt="Caption for the picture." />
+</center>
+<p><br />
+<br />
+</p>
+<p>We use the same example but this time, we solve it with maximum entropy methods, here this methodology provide a density reconstruction over the entire range of values. Clearly, if resampling is an alternative this methodology gives good results</p>
+<br />
+<br />
+
+<center>
+<div style="width:600px; height=600px">
+<img src="images/fattails.png" alt="Caption for the picture." />
+</div>
+</center>
+<p><br />
+<br />
+</p>
+<p>In the literature some authors indicate that the loss distribution is not always unimodal, this distributions can present asymmetries that a simple parametric distribution cannot reach. The methodology that we process here can model bimodal distributions. This is another advantage of the maxent methods.</p>
+<br />
+<br />
+
+<center>
+<img src="images/asymmetries.png" alt="Caption for the picture." />
+</center>
+<p><br />
+<br />
+</p>
+<p>We can relate the concept of entropy with finance, where the hypothesis that markets respond to the level of uncertainty or the element of surprise is analogous to this concept. In the last decades, entropy, which has its origins in physics, has found important applications in finance, and has been an important tool for portfolio selection, as a measure of the degree of diversification, and more widely in asset pricing, to tackle the problem of extracting asset probability distributions from limited data. You can read more about this in Zhong et. al. (2013), that make a review of the many applications of this concept in finance.</p>
+<br />
+<br />
+<br />
+
+<center>
+<img src="images/entropy_def.png" alt="Caption for the picture." />
+</center>
+<p><br />
+<br />
+This concept was used by Jaynes (1957) for first time as a method of statistical inference in the case of a under-determined problem where it was necessary to choose the probability distribution of a discrete random variable <span class="math inline">\(X\)</span> between all possible distributions, when the available information was the expected value of <span class="math inline">\(X\)</span> and the fact that <span class="math inline">\(p_i \leq 0\)</span> and <span class="math inline">\(\sum_{i} p_i = 1\)</span>, in this case there were infinitely many proper probability distributions satisfying this information. So, through the concept of Shannon entropy he selects the alternative that best represented the given information. The essence of our methodology falls within this framework.</p>
+<p>With the maximization of an entropy measure it is possible to find the best non-parametric solution that avoids unnecessary assumptions, without having to insert any structure or correlation beyond the required and that better represents the available information formulated by constraints, in an optimization problem. With this methodology the quality of the results will be linked to the chosen constraints (Gomes-Gonçalves et. al., (2016)).</p>
+<p>So, for our problem it is necessary to define some constraints. A good alternative to model the constrains of this kind of problem is the Laplace transform.</p>
+<br />
+<br />
+<br />
+
+<center>
+<img src="images/lapale_transform.png" alt="Caption for the picture." />
+</center>
+<p><br />
+<br />
+The inversion of the laplace transform is one of the methodologies used to determine the aggregate loss distribution, but this transform is not always easily to inverse. But the good thing is that if we set a variable Y on 0 and 1, this leads to the problem of reconstructing a function from a sequence of alpha moments, where the value alpha is fractional and it is chosen in this way because with a few number of moments we can obtain good density reconstruction (entropy convergence theorem)</p>
+<p>So, all the information about the problem would be compressed in a set of moments obtained from the laplace transform. In our case we will modelling the distribution of strictly positive losses, so our restriction should guarantee that.</p>
+<p>So, through the laplace transform we are going to obtain the distribution of the aggregated losses through two different approximations of maxent methods. The maxent methods that can be considered are…</p>
+<br />
+<br />
+<br />
+
+<center>
+<img src="images/maxent_types.png" alt="Caption for the picture." />
+</center>
+<p><br />
+<br />
+</p>
+<p>Note that the problem is solved in terms of the Lagrange multiplier lambda. The solution is used to obtain the dual problem, where we minimize this functional through a unsconstrained optimization problem. This problem can be solved by the Barzilai and Borwein (BB) optimization method (gradient descent method), which requires the objective function and the gradient of the function with respect of lambda.</p>
+<p><br />
+<br />
+</p>
+<hr />
+<p><strong>References</strong></p>
+<p>1.- <a href="https://core.ac.uk/download/pdf/79176655.pdf">Maxentropic and quantitative methods in operational risk modeling. Thesis dissertation, Sep. 2016.</a></p>
+<p>2.- <a href="https://www.slideshare.net/ErikaGomesGonalves/maxentropic-and-quantitative-methods-in-operational-risk-modeling">Maxentropic and quantitative methods in operational risk modeling (Presentation)</a></p>
+<p>3.- <a href="http://www.mdpi.com/1099-4300/15/11/4909/pdf">Zhong et. al. (2013). Applications of Entropy in Finance: A Review</a></p>
+<hr />
+
+
+
+&nbsp;
+
+<footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          <li>
+            <a href="https://github.com/erikapat" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/erikapatg" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:{{ site.author.email }}" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/erikapgomes" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">
+		  <a href="{{ site.url }}"></a>
+	    </p>
+		<p class="theme-by text-muted">
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<i><small><p align="right"> This website was built using <strong>R Markdown</strong>, 2017. </p></small></i>
+
+<i><small><p align="right">
+<script language="Javascript">
+document.write("Last updated: " + document.lastModified +"");
+</SCRIPT>
+</p></small></i>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
