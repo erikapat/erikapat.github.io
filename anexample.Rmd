@@ -93,7 +93,7 @@ require(highcharter)
 require(htmlwidgets)
 
 source('src/functions_highchart.R')
-load('data/dat.purple.dup.RData')
+load('/home/erika/Dropbox/GIT/MARKDOWN/data/dat.purple.dup.RData')
 
 
 dat.aux.dup.x     <- dat.purple.dup[order(SEEN), ][, MEAN_FREQ_HOUR := round(mean(FREQ_DAY_HOUR),2), by = HOUR][, .(DAY, HOUR, FREQ_DAY_HOUR, MEAN_FREQ_HOUR, MONTH, YEAR)][, KEY := paste0(DAY, '-', HOUR)]
