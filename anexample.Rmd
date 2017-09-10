@@ -47,7 +47,7 @@ suppressWarnings(library(leaflet))
 # Load the output area shapefiles
 data.shape <- readOGR('../data/map/sscc_2016.shp', verbose = F)
 
-load("/home/erika/Dropbox/GIT/MARKDOWN/data/indicadores.SSCC.RData")
+load("../data/indicadores.SSCC.RData")
 Census.Data <- as.data.table(indicadores.SSCC)
 Census.Data <- Census.Data[substr(SSCC, 1,2) == 28, ]
 
@@ -92,7 +92,7 @@ require(highcharter)
 require(htmlwidgets)
 
 source('src/functions_highchart.R')
-load('/home/erika/Dropbox/GIT/MARKDOWN/data/dat.purple.dup.RData')
+load('../data/dat.purple.dup.RData')
 
 
 dat.aux.dup.x     <- dat.purple.dup[order(SEEN), ][, MEAN_FREQ_HOUR := round(mean(FREQ_DAY_HOUR),2), by = HOUR][, .(DAY, HOUR, FREQ_DAY_HOUR, MEAN_FREQ_HOUR, MONTH, YEAR)][, KEY := paste0(DAY, '-', HOUR)]
@@ -109,6 +109,18 @@ graph_points_lines(dat.aux.dup.x, dat.aux.dup.x.dup, xlabel = "Hour", ylabel = "
 
 dat.aux.dup.x <- dat.aux.dup.x[order(Z), ][!duplicated(Z), ][, X := Z][, Z := NULL]
 dt <- dat.aux.dup.x
+
+ ``` 
+ 
+ &nbsp;
+
+--- 
+
+&nbsp; 
+<left> <h4> <strong> Number of devices connected to a Wi-Fi network by day </strong></h4> </left>
+ 
+```{r echo=FALSE, message=FALSE} 
+  
 graph_lines(dt, xlabel = "Day", ylabel = "Number of dispositives connected", ylegend ='Frequency', zlegend ='Day')
 
  ``` 
