@@ -45,7 +45,7 @@ suppressWarnings(library(leaflet))
 
 #------------------------------------------------------------------------------------
 # Load the output area shapefiles
-data.shape <- readOGR('/home/erika/Dropbox/GIT/MARKDOWN/data/map/sscc_2016.shp', verbose = F)
+data.shape <- readOGR('../data/map/sscc_2016.shp', verbose = F)
 
 load("/home/erika/Dropbox/GIT/MARKDOWN/data/indicadores.SSCC.RData")
 Census.Data <- as.data.table(indicadores.SSCC)
