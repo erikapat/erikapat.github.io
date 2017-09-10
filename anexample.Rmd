@@ -37,38 +37,37 @@ The images here are not those that I am interested to show (<strong> Web Page un
 #shiny::includeHTML("./animations/MAPA.html")
 
 
+library("rgdal")
+library("rgeos")
+library("data.table")
+suppressWarnings(library(leaflet))
 
-# library("rgdal")
-# library("rgeos")
-# library("data.table")
-# suppressWarnings(library(leaflet))
-# 
-# 
-# #------------------------------------------------------------------------------------
-# # Load the output area shapefiles
-# data.shape <- readOGR('/home/erika/Dropbox/GIT/MARKDOWN/restore/data/map/sscc_2016.shp', verbose = F)
-# 
-# load("data/indicadores.SSCC.RData")
-# Census.Data <- as.data.table(indicadores.SSCC)
-# Census.Data <- Census.Data[substr(SSCC, 1,2) == 28, ]
-# 
-# Census.Data <- as.data.frame(Census.Data)
-# pal  <- colorNumeric(palette = 'Blues', domain = c(min(Census.Data[, 335]), max(Census.Data[, 335])))
-# mapa <- leaflet() %>%
-#   addPolygons(data = data.shape[data.shape$CUSEC %in% Census.Data[,1], ],
-#               weight = 1,
-#               color = '#000000',
-#               fillColor = pal(as.numeric(Census.Data[,335])),
-#               fillOpacity = 0.6,
-#               popup = ~paste0("<b> SSCC: </b>", CUSEC, "<br>",
-#                               "<b> Municipality: </b>", NMUN, "<br>",
-#                               "<b> Num. of houses for rent: </b>", Census.Data[, 335], "<br>")) %>%
-#   addProviderTiles('OpenStreetMap.Mapnik') %>%
-#   addLegend("bottomright", pal = pal, values = (as.numeric(Census.Data[,335])),
-#             title = "Houses for rent",
-#             opacity = 0.6 )
-# 
-# mapa
+
+#------------------------------------------------------------------------------------
+# Load the output area shapefiles
+data.shape <- readOGR('/home/erika/Dropbox/GIT/MARKDOWN/data/map/sscc_2016.shp', verbose = F)
+
+load("/home/erika/Dropbox/GIT/MARKDOWN/data/indicadores.SSCC.RData")
+Census.Data <- as.data.table(indicadores.SSCC)
+Census.Data <- Census.Data[substr(SSCC, 1,2) == 28, ]
+
+Census.Data <- as.data.frame(Census.Data)
+pal  <- colorNumeric(palette = 'Blues', domain = c(min(Census.Data[, 335]), max(Census.Data[, 335])))
+mapa <- leaflet() %>%
+  addPolygons(data = data.shape[data.shape$CUSEC %in% Census.Data[,1], ],
+              weight = 1,
+              color = '#000000',
+              fillColor = pal(as.numeric(Census.Data[,335])),
+              fillOpacity = 0.6,
+              popup = ~paste0("<b> SSCC: </b>", CUSEC, "<br>",
+                              "<b> Municipality: </b>", NMUN, "<br>",
+                              "<b> Num. of houses for rent: </b>", Census.Data[, 335], "<br>")) %>%
+  addProviderTiles('OpenStreetMap.Mapnik') %>%
+  addLegend("bottomright", pal = pal, values = (as.numeric(Census.Data[,335])),
+            title = "Houses for rent",
+            opacity = 0.6 )
+
+mapa
 
 ``` 
    
