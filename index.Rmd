@@ -57,7 +57,9 @@ This webpage is in its initial stage, so there aren't many things on here yet; b
 <!-- max-width: 1200px; -->
 <!-- } -->
 
-
+<!-- body .main-container { -->
+<!-- max-width: 1200px; -->
+<!-- } -->
 
 <!-- <div><img src="images/entropy_portrait.png" width="300px" heigth="300px" hspace="10px" align="left"></div> -->
 ```{r echo=FALSE, message=FALSE, out.height = '40%'}
