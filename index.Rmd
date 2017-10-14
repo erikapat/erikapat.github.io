@@ -9,32 +9,32 @@ output:
       #in_header:   header.Rhtml
 ---
 
+
+
 &nbsp;
 &nbsp;
 <h1><strong> Erika Gomes-Gonçalves </strong></h1> 
 
 
 
-<div class = "row">
-<div class = "col-md-4">
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-4"> -->
+
+<!-- &nbsp; -->
+<!-- &nbsp; -->
+
+<!-- <div><img src="images/entropy_portrait.png" width="300px" heigth="300px" hspace="10px" align="left"></div> -->
+
+
+<!-- </div> -->
+<div class = "col-md-6">
 
 &nbsp;
-&nbsp;
-
-<div><img src="images/entropy_portrait.png" width="300px" heigth="300px" hspace="10px" align="left"></div>
-
-
-</div>
-<div class = "col-md-8">
-
-&nbsp;
 
 \
 \
 
 
-\
-\
 
 Welcome to my personal web page!
 
@@ -44,9 +44,36 @@ Welcome to my personal web page!
 
 This webpage is in its initial stage, so there aren't many things on here yet; but you'll find a little bit about my work, figures and articles that I put up here and that are mostly a result of little experiments that I read, hear or perform in the past.
 
+</div>
+<!-- imagénes -->
+
+<div class = "row">
+<div class = "col-md-4">
+
+&nbsp;
+&nbsp;
+
+<!-- body .main-container { -->
+<!-- max-width: 1200px; -->
+<!-- } -->
+
+
+
+<!-- <div><img src="images/entropy_portrait.png" width="300px" heigth="300px" hspace="10px" align="left"></div> -->
+```{r echo=FALSE, message=FALSE, out.height = '40%'}
+source('src/density_samplig_graphs.R')
+require(pracma)
+sampling_prin()
+```
+
+<p> * _Click on the colors_  </p>
+
+\
+\
+
 
 </div>
-</div>
+
 
 ---
 

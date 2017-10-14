@@ -7,7 +7,7 @@ output:
     includes:
       #in_header: footer.html
       #before_body: footer.html
-     # after_body: footer.html
+      after_body: footer.html
 ---
 
 &nbsp;
