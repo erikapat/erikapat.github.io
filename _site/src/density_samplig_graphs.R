@@ -185,7 +185,7 @@ gg_graph <- function(dt.cross, dt.densi.true, msn){
   gg <- gg + fte_theme() + theme(legend.position=  c(.9, .9))
   gg <- gg + xlab('x') + ylab('density')
   gg <- gg + ggtitle(msn)
-  # gg <- ggplotly(gg, tooltip = c("y"), dynamicTicks = T)
+   gg <- ggplotly(gg, tooltip = c("y"), dynamicTicks = T)
   # gg$layout$height = 100
   # gg$layout$width = 100
   gg <- ggplotly(gg, session="knitr")
