@@ -40,7 +40,7 @@ mode: selfcontained # {standalone, draft}
 <div class = "col-md-10">
 
 <h2><strong> <i>[Loss Data Analysis: The Maximum Entropy Approach](https://books.buch-findr.de/book/loss-data-analysis/)</i></strong></h2> 
-<h8><i> Forthcoming Book. Publisher: De Gruyter, 2019 </i></h8> 
+<h8><i> Publisher: De Gruyter, 2019 (Forthcoming Book)</i></h8> 
 
 Operational Risk Assessment is an important tool to mitigate losses. This textbook focuses on loss data analysis using a maximum entropy approach. 
 
