@@ -34,7 +34,7 @@ mode: selfcontained # {standalone, draft}
 
 &nbsp;
 
-<div><img src="images/book.png" width="150px" heigth="150px" hspace="10px" align="left"></div>
+<div><img src="images/libro.jpg" width="150px" heigth="150px" hspace="10px" align="left"></div>
 
 </div>
 <div class = "col-md-10">
@@ -73,7 +73,7 @@ This book contains most of the work developed in my Phd dissertation. This is a 
 &nbsp;
 
 <h2><strong> <i>[Calibration of Discrete Time Short Rate Term Structure Models from Coupon Bond Prices](calibrations.html)</i></strong></h2> 
-<h8><i> Working paper, 2017 </i></h8> 
+<h8><i> Forthcoming - Physica A: Statistical Mechanics and its Applications, 2018 </i></h8> 
 
  Our recent work consists in the use of maximum entropy methods for the calibration of discrete time term structure models from coupon bond prices. Here, we use maxentropic methods to determine the short rates along to a binomial tree to obtain a non-parametric alternative to the Black-Derman-Toy and Ho-Lee models used to price derivatives.
  

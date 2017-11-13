@@ -25,7 +25,7 @@ word_document: default
   
 >  In this post we want to show how **Maxent methods** can be used to estimate the prices of the zero coupon prices for each possible date of maturity,  when the only available information come from a few bonds offered in the market. Usually, we do not have the prices of bonds for all years or semesters. For example, it can happen that we only have bonds for maturities of 1, 2, 5, 10, 20, and 30 years, so we have to estimate the prices of the bonds that may have maturities equal to the missing years, semesters or any other level of granularity.  The knowledge of these prices is essential for the valuation of derivatives and several financial products.
   
-> There are several methods that can help to estimate these prices, between them we have **cubic spline interpolation**, the **Nelson-Siegel-Svensson method** and the **B-spline approach**. additionally, we will present here a **simple version** of the method of maximum entropy to solve this problem, that would be extended in future posts.
+> There are several methods that can help to estimate these prices, between them we have **cubic spline interpolation**, the **Nelson-Siegel-Svensson method** and the **B-spline approach**. additionally, we will present a **simple version** of the method of maximum entropy to solve this problem, that would be extended in future posts.
  *
  
  > block quote 
