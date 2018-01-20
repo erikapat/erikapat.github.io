@@ -12,8 +12,8 @@ output:
  \
   \
 
-<h2><strong> <i>[Calibration of Discrete Time Short Rate Term Structure Models from Coupon Bond Prices](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2976076)</i></strong></h2> 
-<h8><i> Working paper, 2017 </i></h8> 
+<h2><strong> <i>[Calibration of short rate term structure models from bid–ask coupon bond prices](figure/calibration_short_rate_term_structure.pdf)</i></strong></h2> 
+<h8><i> Physica A: Statistical Mechanics and its Applications, 2018 </i></h8> 
 
   \
   

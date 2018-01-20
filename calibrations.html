@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -31,10 +31,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -279,9 +281,9 @@ $(document).ready(function () {
 <br />
 
 <h2>
-<strong> <i><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2976076">Calibration of Discrete Time Short Rate Term Structure Models from Coupon Bond Prices</a></i></strong>
+<strong> <i><a href="figure/calibration_short_rate_term_structure.pdf">Calibration of short rate term structure models from bid–ask coupon bond prices</a></i></strong>
 </h2>
-<p><h8><i> Working paper, 2017 </i></h8></p>
+<p><h8><i> Physica A: Statistical Mechanics and its Applications, 2018 </i></h8></p>
 <p><br />
 <br />
 In this work we use the method of maximum entropy to solve two problems in interest term structure determination. First we use the method of maximum entropy in the mean to solve an inverse problem consisting of determining the price of the zero coupon bonds when we only know the price of a few coupon bonds up to a bid-ask range, with or without pricing errors. This is a particular case of the general problem of determining discount factors from the knowledge of their present value up to a range, and with or without uncertainty.</p>
